@@ -20,18 +20,18 @@ pros::Controller controller(pros::E_CONTROLLER_MASTER);
 pros::MotorGroup leftMotors({
                             19,
                             20
-                            }, pros::MotorGearset::green); // left motor group - ports 3 (reversed), 4, 5 (reversed)
+                            }, pros::MotorGearset::green);
 
 pros::MotorGroup rightMotors({
                             16,
                             17
-                            }, pros::MotorGearset::green); // right motor group - ports 6, 7, 9 (reversed)
+                            }, pros::MotorGearset::green);
 
 // drivetrain settings
 lemlib::Drivetrain drivetrain(&leftMotors, // left motor group
                               &rightMotors, // right motor group
-                              10, // 15 inch track width
-                              lemlib::Omniwheel::OLD_325, // WHEEL TYPE
+                              12, // 12 inch track width
+                              lemlib::Omniwheel::OLD_4, // WHEEL TYPE
                               200, // drivetrain rpm is 200
                               5 // horizontal drift: 2 for all-omni tank drive, 8 for omni-traction tank drive
 );
